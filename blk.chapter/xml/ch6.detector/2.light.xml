@@ -1,0 +1,192 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="W(_y85{I^3IGwwt0gT?/">rtn</variable>
+  </variables>
+  <block type="fun_import_blk" id="OfL_fsVd#i:8K$,3npuF" x="212" y="37">
+    <next>
+      <block type="fun_robo_controller" id="p~,n!y^cryWmkF3Z%!)}">
+        <next>
+          <block type="fun_ps" id="OH~NmJrm}=qt2^S()}Gl">
+            <next>
+              <block type="fun_ai" id="f~pd)0L4`kQQ[%-pC??f">
+                <next>
+                  <block type="fun_ai_cam_open" id="?+2]d81!1#F.!dpMWYF0"></block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="controls_whileUntil" id="$rvYRtPKUenJ=r^;+=c}" x="213" y="237">
+    <field name="MODE">WHILE</field>
+    <value name="BOOL">
+      <block type="logic_boolean" id="00e.57H84IhC[wn%]4Bn">
+        <field name="BOOL">TRUE</field>
+      </block>
+    </value>
+    <statement name="DO">
+      <block type="fun_ai_cam_img_read" id="H/oz$`2n!vDvdYqlMV@b">
+        <next>
+          <block type="variables_set" id="RWG?hcUg6*nSwg{9B!r5">
+            <field name="VAR" id="W(_y85{I^3IGwwt0gT?/">rtn</field>
+            <value name="VALUE">
+              <block type="fun_ai_traffic_light_detector" id="LtbNV#1a%NFxM(l!G2Xg">
+                <value name="th">
+                  <block type="math_number" id="Y5`2(E(n_[^]VXn^KZaU">
+                    <field name="NUM">75</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="controls_if" id="JkEp[Bz!1H_F_2WNgS/%">
+                <value name="IF0">
+                  <block type="logic_compare" id="@r3a(7IG=qeBKOs#69cQ">
+                    <field name="OP">GTE</field>
+                    <value name="A">
+                      <block type="variables_get" id="ts.4UrfcDq}o}dE|VUWy">
+                        <field name="VAR" id="W(_y85{I^3IGwwt0gT?/">rtn</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="B+x3)FbI5}15},r8Tg@z">
+                        <field name="NUM">0</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="controls_if" id="!.+89/r}P=[vuPSWp}i4">
+                    <value name="IF0">
+                      <block type="logic_compare" id="0iyO{7t:2i6h?]^H$wP7">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block type="variables_get" id="o6)[8c}x!?*^(rjyhrKF">
+                            <field name="VAR" id="W(_y85{I^3IGwwt0gT?/">rtn</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="@/D!~X+h$Mx~A/NP8hQ$">
+                            <field name="NUM">0</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="text_print" id="R=ThygliubkIc~QDx19^">
+                        <value name="TEXT">
+                          <shadow type="text" id="h;@Y)-)#2)LIop{vCl,k">
+                            <field name="TEXT">no light</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="controls_if" id=";2iAnZc0Pq,t7PG7U@BX">
+                        <value name="IF0">
+                          <block type="logic_compare" id="MR.v[,OcyQJXd88+ve9m">
+                            <field name="OP">EQ</field>
+                            <value name="A">
+                              <block type="variables_get" id="7fe|:6?IP%hn{LX2%g8g">
+                                <field name="VAR" id="W(_y85{I^3IGwwt0gT?/">rtn</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_number" id="*#-.iN4TmPrQIp5TVU#J">
+                                <field name="NUM">1</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="text_print" id="xrpbF$0%KwteeOxg(D40">
+                            <value name="TEXT">
+                              <shadow type="text" id="fBxn`u/Fr4Z5mx~zUKfv">
+                                <field name="TEXT">green light</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="controls_if" id="0/1(kaB/8nejxQ4oW~!%">
+                            <value name="IF0">
+                              <block type="logic_compare" id="#e)M6{ek_M?d%]PX?K{-">
+                                <field name="OP">EQ</field>
+                                <value name="A">
+                                  <block type="variables_get" id="ZpFb:)0F{1dKyUAI$5Pr">
+                                    <field name="VAR" id="W(_y85{I^3IGwwt0gT?/">rtn</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="math_number" id="g6p]1jQDQbh1plVIciL9">
+                                    <field name="NUM">2</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="DO0">
+                              <block type="text_print" id="Z[@R]sY2+38j)}i?z[:b">
+                                <value name="TEXT">
+                                  <shadow type="text" id="]j@V42g1Nle^!(:o)-)q">
+                                    <field name="TEXT">yellow light</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="controls_if" id="i,]1Sogg|W}y7!zP+h0;">
+                                <value name="IF0">
+                                  <block type="logic_compare" id="X.gh(BdLxPH#8ZnP5Bd6">
+                                    <field name="OP">EQ</field>
+                                    <value name="A">
+                                      <block type="variables_get" id="g,p9D+z4V~vEI~CBs(|4">
+                                        <field name="VAR" id="W(_y85{I^3IGwwt0gT?/">rtn</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="math_number" id="$yZ#1#ZHK/HCqa/mpU[!">
+                                        <field name="NUM">3</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <statement name="DO0">
+                                  <block type="text_print" id="Aj+nU|5W3gwu)T!~G=q=">
+                                    <value name="TEXT">
+                                      <shadow type="text" id="h$`fWlWFJd4{[u6@ON}P">
+                                        <field name="TEXT">red light</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </statement>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="fun_ai_img_display" id="4nMZmpq-/8[)@XgQ8vfN">
+                    <next>
+                      <block type="fun_robo_delay" id="n%`;{xt?1|^~!g)loiHY">
+                        <value name="NAME">
+                          <block type="math_number" id="P!T)Zp?D8F+L(tnb1MXx">
+                            <field name="NUM">0.01</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

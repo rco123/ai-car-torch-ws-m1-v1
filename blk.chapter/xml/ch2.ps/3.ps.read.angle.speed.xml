@@ -1,0 +1,64 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="UvB184B)6Z:;=Ob)7sxn">angle</variable>
+    <variable id="UPdzD9_#hlzBqx@r.ya]">speed</variable>
+  </variables>
+  <block type="fun_import_blk" id="OfL_fsVd#i:8K$,3npuF" x="237" y="-12"></block>
+  <block type="fun_robo_controller" id="p~,n!y^cryWmkF3Z%!)}" x="237" y="63">
+    <next>
+      <block type="fun_ps" id="OH~NmJrm}=qt2^S()}Gl"></block>
+    </next>
+  </block>
+  <block type="controls_whileUntil" id="$rvYRtPKUenJ=r^;+=c}" x="237" y="163">
+    <field name="MODE">WHILE</field>
+    <value name="BOOL">
+      <block type="logic_boolean" id="00e.57H84IhC[wn%]4Bn">
+        <field name="BOOL">TRUE</field>
+      </block>
+    </value>
+    <statement name="DO">
+      <block type="variables_set" id="E{u^5+g_SB:pYpyS}zRe">
+        <field name="VAR" id="UvB184B)6Z:;=Ob)7sxn">angle</field>
+        <value name="VALUE">
+          <block type="fun_ps_read_angle" id="FF=*n!h$i|:yQ(EU;f(("></block>
+        </value>
+        <next>
+          <block type="variables_set" id="#ReN$+)Vo$O^W]vm:npB">
+            <field name="VAR" id="UPdzD9_#hlzBqx@r.ya]">speed</field>
+            <value name="VALUE">
+              <block type="fun_ps_read_speed" id="pVvHtOKhqOz=B(:o+_ux"></block>
+            </value>
+            <next>
+              <block type="fun_user" id="@B3ShzQ|uWS[8!MnQnPq">
+                <field name="code">print(f'angle, speed ={angle},{speed}')</field>
+                <next>
+                  <block type="fun_robo_move" id="U{zCe/}4{A.3wi(~.r,5">
+                    <value name="angle">
+                      <block type="variables_get" id="9P[bJWN/WTY`S:3NT7I9">
+                        <field name="VAR" id="UvB184B)6Z:;=Ob)7sxn">angle</field>
+                      </block>
+                    </value>
+                    <value name="speed">
+                      <block type="variables_get" id="@*#/]Nj5Sf7hSf{Do_DN">
+                        <field name="VAR" id="UPdzD9_#hlzBqx@r.ya]">speed</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="fun_robo_delay" id="n%`;{xt?1|^~!g)loiHY">
+                        <value name="NAME">
+                          <block type="math_number" id="P!T)Zp?D8F+L(tnb1MXx">
+                            <field name="NUM">0.01</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

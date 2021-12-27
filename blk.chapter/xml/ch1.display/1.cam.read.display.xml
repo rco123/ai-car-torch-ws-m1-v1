@@ -1,0 +1,41 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <block type="fun_import_blk" id="F=^.]KbFnoU}rxUrQ]@R" x="262" y="88"></block>
+  <block type="fun_robo_controller" id="6oG[,9%$[qEVP?Ku:%L3" x="262" y="163">
+    <next>
+      <block type="fun_ai" id="w|(dVf;A8zhDDVl[cicw">
+        <next>
+          <block type="fun_ai_cam_open" id="]?*r:tCxELo:Sd0Zw)hn"></block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="controls_repeat_ext" id="g4xQRo)q@75QaN^f]}y{" x="262" y="288">
+    <value name="TIMES">
+      <shadow type="math_number" id="w]!T]QT:|Be$qD@Xb4cW">
+        <field name="NUM">1000</field>
+      </shadow>
+    </value>
+    <statement name="DO">
+      <block type="fun_user" id="2K/L6jUxooUhwbs9|j%3">
+        <field name="code">print(f'for cnt i = {count}')</field>
+        <next>
+          <block type="fun_ai_cam_img_read" id="^/GH9_E6)PoIVSSP67Wv">
+            <next>
+              <block type="fun_ai_img_display" id="5r.rui0DOA#lo(^`JfGX">
+                <next>
+                  <block type="fun_robo_delay" id="qwSY]rGUf`mI?+P@P]=@">
+                    <value name="NAME">
+                      <block type="math_number" id="-_-~)kX4|Q4Ze!]-AW=,">
+                        <field name="NUM">0.1</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

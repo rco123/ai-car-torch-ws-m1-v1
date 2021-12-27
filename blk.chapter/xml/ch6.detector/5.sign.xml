@@ -1,0 +1,148 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="W(_y85{I^3IGwwt0gT?/">rtn</variable>
+  </variables>
+  <block type="fun_import_blk" id="OfL_fsVd#i:8K$,3npuF" x="212" y="37">
+    <next>
+      <block type="fun_robo_controller" id="p~,n!y^cryWmkF3Z%!)}">
+        <next>
+          <block type="fun_ps" id="OH~NmJrm}=qt2^S()}Gl">
+            <next>
+              <block type="fun_ai" id="f~pd)0L4`kQQ[%-pC??f">
+                <next>
+                  <block type="fun_ai_cam_open" id="?+2]d81!1#F.!dpMWYF0">
+                    <next>
+                      <block type="fun_ai_traffic_sign_load_model" id="oA5ju_#x5Y5kx3wZO^BJ">
+                        <value name="file">
+                          <block type="text" id="EX+|t,O$obmB~hTEzw(I">
+                            <field name="TEXT">model_trained.h5</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="controls_whileUntil" id="$rvYRtPKUenJ=r^;+=c}">
+                            <field name="MODE">WHILE</field>
+                            <value name="BOOL">
+                              <block type="logic_boolean" id="00e.57H84IhC[wn%]4Bn">
+                                <field name="BOOL">TRUE</field>
+                              </block>
+                            </value>
+                            <statement name="DO">
+                              <block type="fun_ai_cam_img_read" id="H/oz$`2n!vDvdYqlMV@b">
+                                <next>
+                                  <block type="variables_set" id="RWG?hcUg6*nSwg{9B!r5">
+                                    <field name="VAR" id="W(_y85{I^3IGwwt0gT?/">rtn</field>
+                                    <value name="VALUE">
+                                      <block type="fun_ai_traffic_sign_detector" id="C7R8[]-L{aMc_X#|V=l$">
+                                        <value name="th">
+                                          <block type="math_number" id="+D~;@HyJfVsd9~_#UJ/a">
+                                            <field name="NUM">75</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="controls_if" id="JkEp[Bz!1H_F_2WNgS/%">
+                                        <value name="IF0">
+                                          <block type="logic_compare" id="@r3a(7IG=qeBKOs#69cQ">
+                                            <field name="OP">GTE</field>
+                                            <value name="A">
+                                              <block type="variables_get" id="ts.4UrfcDq}o}dE|VUWy">
+                                                <field name="VAR" id="W(_y85{I^3IGwwt0gT?/">rtn</field>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <block type="math_number" id="B+x3)FbI5}15},r8Tg@z">
+                                                <field name="NUM">0</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <statement name="DO0">
+                                          <block type="controls_if" id="!.+89/r}P=[vuPSWp}i4">
+                                            <value name="IF0">
+                                              <block type="logic_compare" id="0iyO{7t:2i6h?]^H$wP7">
+                                                <field name="OP">EQ</field>
+                                                <value name="A">
+                                                  <block type="variables_get" id="o6)[8c}x!?*^(rjyhrKF">
+                                                    <field name="VAR" id="W(_y85{I^3IGwwt0gT?/">rtn</field>
+                                                  </block>
+                                                </value>
+                                                <value name="B">
+                                                  <block type="math_number" id="@/D!~X+h$Mx~A/NP8hQ$">
+                                                    <field name="NUM">0</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <statement name="DO0">
+                                              <block type="text_print" id="R=ThygliubkIc~QDx19^">
+                                                <value name="TEXT">
+                                                  <shadow type="text" id="h;@Y)-)#2)LIop{vCl,k">
+                                                    <field name="TEXT">speed 30km</field>
+                                                  </shadow>
+                                                </value>
+                                              </block>
+                                            </statement>
+                                            <next>
+                                              <block type="controls_if" id=";2iAnZc0Pq,t7PG7U@BX">
+                                                <value name="IF0">
+                                                  <block type="logic_compare" id="MR.v[,OcyQJXd88+ve9m">
+                                                    <field name="OP">EQ</field>
+                                                    <value name="A">
+                                                      <block type="variables_get" id="7fe|:6?IP%hn{LX2%g8g">
+                                                        <field name="VAR" id="W(_y85{I^3IGwwt0gT?/">rtn</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="B">
+                                                      <block type="math_number" id="*#-.iN4TmPrQIp5TVU#J">
+                                                        <field name="NUM">1</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                                <statement name="DO0">
+                                                  <block type="text_print" id="0ARx;4!BC}xfz(ot85W#">
+                                                    <value name="TEXT">
+                                                      <shadow type="text" id="j^fqv8^BC2BsFNBWJwCC">
+                                                        <field name="TEXT">speed 50km</field>
+                                                      </shadow>
+                                                    </value>
+                                                  </block>
+                                                </statement>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </statement>
+                                        <next>
+                                          <block type="fun_ai_img_display" id="4nMZmpq-/8[)@XgQ8vfN">
+                                            <next>
+                                              <block type="fun_robo_delay" id="n%`;{xt?1|^~!g)loiHY">
+                                                <value name="NAME">
+                                                  <block type="math_number" id="P!T)Zp?D8F+L(tnb1MXx">
+                                                    <field name="NUM">0.01</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </statement>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

@@ -1,0 +1,27 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <block type="fun_import_blk" id="/bue?A8fkC0`|_E8G(bT" x="288" y="88"></block>
+  <block type="fun_ai" id="c`MOIiY$*77-JH+gTta{" x="288" y="162">
+    <next>
+      <block type="fun_ai_img_read" id="hzXzqpxb?7_7c@/K[xK?">
+        <value name="NAME">
+          <block type="text" id="`~$m/Gs/B^g7NRLNkkW0">
+            <field name="TEXT">'imgs/aicar.jpg</field>
+          </block>
+        </value>
+        <next>
+          <block type="controls_whileUntil" id="R)6VN|[B/ba6B2mPpS$i">
+            <field name="MODE">WHILE</field>
+            <value name="BOOL">
+              <block type="logic_boolean" id="[?$7mMa,03[55=V11uC5">
+                <field name="BOOL">TRUE</field>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="fun_ai_img_display" id="O]y,7|#U`i?yu.U.UL2i"></block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

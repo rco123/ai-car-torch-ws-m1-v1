@@ -1,0 +1,49 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <block type="fun_import_blk" id="OfL_fsVd#i:8K$,3npuF" x="212" y="37">
+    <next>
+      <block type="fun_robo_controller" id="p~,n!y^cryWmkF3Z%!)}">
+        <next>
+          <block type="fun_ps" id="OH~NmJrm}=qt2^S()}Gl">
+            <next>
+              <block type="fun_ai" id="f~pd)0L4`kQQ[%-pC??f">
+                <next>
+                  <block type="fun_ai_cam_open" id="?+2]d81!1#F.!dpMWYF0"></block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="controls_whileUntil" id="$rvYRtPKUenJ=r^;+=c}" x="213" y="237">
+    <field name="MODE">WHILE</field>
+    <value name="BOOL">
+      <block type="logic_boolean" id="00e.57H84IhC[wn%]4Bn">
+        <field name="BOOL">TRUE</field>
+      </block>
+    </value>
+    <statement name="DO">
+      <block type="fun_ai_cam_img_read" id="H/oz$`2n!vDvdYqlMV@b">
+        <next>
+          <block type="fun_ai_traffic_light_detector_check" id="Cv~L#*tBxnIuYWH?S;yU">
+            <value name="th">
+              <block type="math_number" id="sm1v^W7EWpN7a?fi8F]T">
+                <field name="NUM">75</field>
+              </block>
+            </value>
+            <next>
+              <block type="fun_robo_delay" id="n%`;{xt?1|^~!g)loiHY">
+                <value name="NAME">
+                  <block type="math_number" id="P!T)Zp?D8F+L(tnb1MXx">
+                    <field name="NUM">0.01</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

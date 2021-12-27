@@ -1,0 +1,60 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <block type="fun_import_blk" id="QJD5zfGBlhC^WQ_x]|H," x="263" y="113"></block>
+  <block type="fun_ai" id="w;rck^aoxY!ed*!FTEm{" x="263" y="188"></block>
+  <block type="text_print" id="`HUs4zu(B^+ZT@4C;!Tp" x="263" y="263">
+    <value name="TEXT">
+      <shadow type="text" id="aR1gZWulu:wpO3DY(^X%">
+        <field name="TEXT">read Lena Image</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="fun_ai_img_read" id="w(.8k5al[0or93b79a`@">
+        <value name="NAME">
+          <block type="text" id="*l^D=Lx5I(1|S`YCckQ7">
+            <field name="TEXT">./imgs/lena.jpg</field>
+          </block>
+        </value>
+        <next>
+          <block type="text_print" id="#ic9LmJty$,f_?6p,8r?">
+            <value name="TEXT">
+              <shadow type="text" id="~MMVoNmW]`R.8/T5-|J:">
+                <field name="TEXT">abc</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="fun_ai_img_write" id="9T~fQ_UQ9Pep*Y3Nqs$#">
+                <value name="NAME">
+                  <block type="text" id="lN[tJMG0}5=:PI`a==h;">
+                    <field name="TEXT">./imgs/lena-1.jpg</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="text_print" id="9$#l9[$+hwo)-$j^gR9C">
+                    <value name="TEXT">
+                      <shadow type="text" id="Q!g$iUm,OkqiCK8;|%dF">
+                        <field name="TEXT">Display Image</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="controls_whileUntil" id="gf0#E27!.*s4BnQa8|+0">
+                        <field name="MODE">WHILE</field>
+                        <value name="BOOL">
+                          <block type="logic_boolean" id="MSC|eB.QdZjVQ+u-3/wj">
+                            <field name="BOOL">TRUE</field>
+                          </block>
+                        </value>
+                        <statement name="DO">
+                          <block type="fun_ai_img_display" id="O_;P/]kD+@VxG~np4!!L"></block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

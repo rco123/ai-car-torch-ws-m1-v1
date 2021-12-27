@@ -1,0 +1,131 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="UPdzD9_#hlzBqx@r.ya]">speed</variable>
+    <variable id="%zFgpG[~|z]9uzvbW$C^">cnt</variable>
+    <variable id="UvB184B)6Z:;=Ob)7sxn">angle</variable>
+  </variables>
+  <block type="fun_import_blk" id="OfL_fsVd#i:8K$,3npuF" x="212" y="37">
+    <next>
+      <block type="fun_robo_controller" id="p~,n!y^cryWmkF3Z%!)}">
+        <next>
+          <block type="fun_ps" id="OH~NmJrm}=qt2^S()}Gl">
+            <next>
+              <block type="fun_ai" id="f~pd)0L4`kQQ[%-pC??f">
+                <next>
+                  <block type="fun_ai_cam_open" id="?+2]d81!1#F.!dpMWYF0">
+                    <next>
+                      <block type="variables_set" id="RU=[b!)hCm2Yz8`tf)R@">
+                        <field name="VAR" id="UPdzD9_#hlzBqx@r.ya]">speed</field>
+                        <value name="VALUE">
+                          <block type="math_number" id="f{2jP{G*bE0lLV#0;DVe">
+                            <field name="NUM">200</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="variables_set" id="vkT?4+!hs;WCU%5*Gpg7">
+                            <field name="VAR" id="%zFgpG[~|z]9uzvbW$C^">cnt</field>
+                            <value name="VALUE">
+                              <block type="math_number" id="nhFUNrYedZX71d8f?H(R">
+                                <field name="NUM">0</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="controls_whileUntil" id="$rvYRtPKUenJ=r^;+=c}">
+                                <field name="MODE">WHILE</field>
+                                <value name="BOOL">
+                                  <block type="logic_boolean" id="00e.57H84IhC[wn%]4Bn">
+                                    <field name="BOOL">TRUE</field>
+                                  </block>
+                                </value>
+                                <statement name="DO">
+                                  <block type="fun_ai_cam_img_read" id="H/oz$`2n!vDvdYqlMV@b">
+                                    <next>
+                                      <block type="fun_ai_img_display" id="nf0|w+ghR6svH{d^d,rs">
+                                        <next>
+                                          <block type="variables_set" id="HtM(vVMB3k+3hszN+kR+">
+                                            <field name="VAR" id="UvB184B)6Z:;=Ob)7sxn">angle</field>
+                                            <value name="VALUE">
+                                              <block type="fun_ps_read_angle" id="]Bbs8nX_]g3Y8dk,cVE_"></block>
+                                            </value>
+                                            <next>
+                                              <block type="fun_user" id="S.z+*:]H/=C.8kXaN5Z:">
+                                                <field name="code">print(f'angle,speed = {angle}, {speed}')</field>
+                                                <next>
+                                                  <block type="fun_robo_move" id="iRE?OG`e-Ki{};h)qAZR">
+                                                    <value name="angle">
+                                                      <block type="variables_get" id="xo-N(re4MHe1.Z[c_C]4">
+                                                        <field name="VAR" id="UvB184B)6Z:;=Ob)7sxn">angle</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="speed">
+                                                      <block type="variables_get" id="os4L;C`Z_jN~lK-[@9o.">
+                                                        <field name="VAR" id="UPdzD9_#hlzBqx@r.ya]">speed</field>
+                                                      </block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="fun_ai_img_write" id="7fOz8m}*F5~lfUzM+RmB">
+                                                        <value name="NAME">
+                                                          <block type="fun_user_input" id="C|M@=XEEQW,t5)t}[*zn">
+                                                            <field name="user_input">f'./imgs/{cnt:03d}.jpg'</field>
+                                                          </block>
+                                                        </value>
+                                                        <next>
+                                                          <block type="variables_set" id="2I*;9JSIKGfe!4=+I:]1">
+                                                            <field name="VAR" id="%zFgpG[~|z]9uzvbW$C^">cnt</field>
+                                                            <value name="VALUE">
+                                                              <block type="math_arithmetic" id="=k5oKA9)6TetCvn#{tg~">
+                                                                <field name="OP">ADD</field>
+                                                                <value name="A">
+                                                                  <shadow type="math_number" id="J0.Gvy4y,*=:WpeW-a=n">
+                                                                    <field name="NUM">1</field>
+                                                                  </shadow>
+                                                                  <block type="variables_get" id="eGN4[_]c6`94:k{Fnn!F">
+                                                                    <field name="VAR" id="%zFgpG[~|z]9uzvbW$C^">cnt</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="B">
+                                                                  <shadow type="math_number" id="oz:}Hq5.Uvt;T0p=HN5`">
+                                                                    <field name="NUM">1</field>
+                                                                  </shadow>
+                                                                </value>
+                                                              </block>
+                                                            </value>
+                                                            <next>
+                                                              <block type="fun_robo_delay" id="n%`;{xt?1|^~!g)loiHY">
+                                                                <value name="NAME">
+                                                                  <block type="math_number" id="P!T)Zp?D8F+L(tnb1MXx">
+                                                                    <field name="NUM">0.01</field>
+                                                                  </block>
+                                                                </value>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </statement>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
